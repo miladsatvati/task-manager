@@ -18,5 +18,65 @@ export const ActivitiesInfoData = [
         number: "23",
         version: "Logged in",
         created: " Leo"
-    }
+    },
+    {
+        number: "15",
+        version: "Logged in",
+        created: " Rust"
+    },
+    {
+        number: "15",
+        version: "Logged in",
+        created: " Rust"
+    },
+    {
+        number: "15",
+        version: "Logged in",
+        created: " Rust"
+    },
+    {
+        number: "15",
+        version: "Logged in",
+        created: " Rust"
+    },
+    {
+        number: "15",
+        version: "Logged in",
+        created: " Rust"
+    },
+        {
+        number: "15",
+        version: "Logged in",
+        created: " Rust"
+    },
+        {
+        number: "15",
+        version: "Logged in",
+        created: " Rust"
+    },
+    {
+        number: "15",
+        version: "Logged in",
+        created: " Rust"
+    },
+    {
+        number: "15",
+        version: "Logged in",
+        created: " Rust"
+    },
+    {
+        number: "15",
+        version: "Logged in",
+        created: " Rust"
+    },
+    {
+        number: "15",
+        version: "Logged in",
+        created: " Rust"
+    },
+    {
+        number: "15",
+        version: "Logged in",
+        created: " Rust"
+    },
 ]

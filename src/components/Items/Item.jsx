@@ -1,26 +1,10 @@
 import React from "react";
 import ItemCSS from "./Item.module.css";
 import Calendar from "../Calendar/Calendar";
-
-const services = [
-  { title: "S22" },
-  { title: "S14" },
-  { title: "S1" },
-  { title: "S1" },
-  { title: "S3" },
-  { title: "S5" },
-  { title: "S54" },
-  { title: "S6" },
-  { title: "S2" },
-  { title: "S8" },
-  { title: "S7" },
-  { title: "S23" },
-  { title: "S14" },
-  { title: "S16" },
-  { title: "S18" },
-  { title: "S21" },
-  { title: "S1" },
-];
+import { AiOutlineOrderedList } from "react-icons/ai";
+// import { BsFillPersonFill } from "react-icons/bs";
+import { services } from "./Item-Data";
+import { Rissues } from "./Item-Data";
 
 export default function Item() {
   return (
@@ -39,7 +23,7 @@ export default function Item() {
             <button>Complete</button>
           </div>
           <div className={ItemCSS.cal}>
-            <p>Oout</p>
+            <p>Oout:</p>
             <Calendar />
           </div>
           <div className={ItemCSS.noSer}>
@@ -55,14 +39,30 @@ export default function Item() {
               );
             })}
           </div>
-          <div>
+          <div className={ItemCSS.autoR}>
             <h1>Automatic report</h1>
             <button>Download API</button>
             <button>Deactivate</button>
           </div>
-          d
+          <div className={ItemCSS.manR}>
+            <h1>Manual Report</h1>
+            <button>Down</button>
+            <button>Maintenance</button>
+            <button>Up</button>
+          </div>
         </aside>
-        <section className={ItemCSS.main}></section>
+        <section className={ItemCSS.main}>
+          <AiOutlineOrderedList />
+          {Rissues.map((item, index) => {
+            return (
+              <div key={index} className={ItemCSS.issuesBox}>
+                <p>{`${Rissues.length - index}`}</p>
+                <p>{item.info}</p>
+                <p>{item.status}</p>
+              </div>
+            );
+          })}
+        </section>
       </div>
     </div>
   );
