@@ -1,0 +1,11 @@
+@font-face {
+    font-family: "futura";
+    src: url("./assets/fonts/futura\ medium\ condensed\ bt.ttf");
+}
+
+* {
+    box-sizing: border-box;
+    font-family: "futura";
+    margin: 0;
+    padding: 0;
+}
