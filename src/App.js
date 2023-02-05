@@ -11,11 +11,13 @@ import ReportsSatr from './components/ReportsStar/ReportsSatr'
 import LineGraph from './components/ReportsStar/LineGraph'
 import ShowTasks from './components/showTasks/ShowTasks'
 import AddTask from './components/addTask/AddTask'
+import { AddStage } from './components/schAddStage/AddStage'
 export default function App() {
     return (
       <div>
         <Routes>
-          <Route path='/' element={<AddTask />} />
+          <Route path='/' element={<ShowTasks />} />
+          <Route path='/as' element={<AddTask />} />
           <Route path='/sdd' element={<ShowTasks />} />
           <Route path='/ww' element={<LineGraph />} />
           <Route path='/wee' element={<ReportsSatr />} />

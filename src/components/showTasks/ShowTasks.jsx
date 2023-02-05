@@ -3,6 +3,7 @@ import tasksCss from './ShowTasks.module.css'
 import { AiFillCaretDown } from "react-icons/ai";
 import { AiFillPlusCircle } from "react-icons/ai";
 import { Link } from 'react-router-dom';
+import {ShowTasksData} from './ShowTasksData'
 
 export default function ShowTasks() {
   return (
@@ -22,13 +23,18 @@ export default function ShowTasks() {
                     <th>Deadline</th>
                     <th>Complete</th>
                 </tr>
-                <tr>
-                    <td>8</td>
-                    <td>blabla</td>
-                    <td>ongoing</td>
-                    <td>1/2/2023</td>
-                    <td><button className={tasksCss.mainBTN}>Done</button></td>
-                </tr>
+                {ShowTasksData.map((item, index) => {
+                    return (
+                        <tr key={index}>
+                            <td>{ShowTasksData.length-index}</td>
+                            <td>{item.Tasks}</td>
+                            <td>{item.State}</td>
+                            <td>{item.Deadline}</td>
+                            <td><button className={tasksCss.mainBTN}>Done</button></td>
+                        </tr>
+                    )
+                })}
+                
             </table>
         </div>
             
