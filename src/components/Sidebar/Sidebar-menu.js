@@ -1,5 +1,6 @@
 import React, { useState } from "react";
-import SidebarChart from "../Stats/Stats";
+// import SidebarChart from "../Stats/Stats";
+import PsInfo from "../Ps-Info/Ps-Info";
 import SidebarCSS from "./Sidebar.module.css";
 import { AiOutlineMenu } from "react-icons/ai";
 import { AiOutlineClose } from "react-icons/ai"
@@ -38,7 +39,7 @@ export default function Sidebar() {
             )
           })}
         </ul>
-          <SidebarChart />
+          <PsInfo />
       </nav>
     </>
   );

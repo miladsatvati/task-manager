@@ -1,7 +1,17 @@
-body {
-    box-sizing: border-box;
-}
-
 .container {
     display: flex;
+}
+
+.container main {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+    align-items: center;
+    padding-top: 1rem;
+}
+
+.container header {
+
+    justify-content: center;
 }

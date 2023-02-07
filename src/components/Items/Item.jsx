@@ -2,9 +2,17 @@ import React from "react";
 import ItemCSS from "./Item.module.css";
 import Calendar from "../Calendar/Calendar";
 import { AiOutlineOrderedList } from "react-icons/ai";
-// import { BsFillPersonFill } from "react-icons/bs";
+import { BsFillPeopleFill } from "react-icons/bs"
+import { AiFillFlag } from "react-icons/ai"
+import { AiFillInfoCircle } from "react-icons/ai"
+import { AiFillCaretDown } from "react-icons/ai";
+import { BsFillPersonFill } from "react-icons/bs";
 import { services } from "./Item-Data";
-import { Rissues } from "./Item-Data";
+import { tasks } from "./Item-Data";
+import { comments } from "./Item-Data";
+import { issues } from "./Item-Data";
+import { ActivitiesInfoData } from "../Activities-Info/Activities-info-data";
+import { Link } from "react-router-dom";
 
 export default function Item() {
   return (
@@ -52,16 +60,113 @@ export default function Item() {
           </div>
         </aside>
         <section className={ItemCSS.main}>
-          <AiOutlineOrderedList />
-          {Rissues.map((item, index) => {
-            return (
-              <div key={index} className={ItemCSS.issuesBox}>
-                <p>{`${Rissues.length - index}`}</p>
-                <p>{item.info}</p>
-                <p>{item.status}</p>
+          <div className={ItemCSS.Box} style={{ "margin-top": 0 }}>
+            <AiOutlineOrderedList
+              size="28"
+              style={{ position: "absolute", left: "-3.5%", top: "0%" }}
+            />
+            {tasks.map((item, index) => {
+              return (
+                <div key={index} className={ItemCSS.tasksItems}>
+                  <p>{`${tasks.length - index}`}</p>
+                  <p>{item.info}</p>
+                  <button
+                    className={
+                      item.status === "Done"
+                        ? `${ItemCSS.statusBtn} ${ItemCSS.statusBtnDone}`
+                        : ItemCSS.statusBtn
+                    }>
+                    {item.status}
+                  </button>
+                </div>
+              );
+            })}
+            <div className={ItemCSS.link}>
+              <Link>See All</Link>
+            </div>
+          </div>
+          <div className={ItemCSS.Box}>
+            <BsFillPeopleFill
+              size="28"
+              style={{ position: "absolute", left: "-3.5%", top: "25%" }}
+            />
+            {comments.map((item, index) => {
+              return (
+                <div key={index} className={ItemCSS.commentsItems}>
+                  <BsFillPersonFill size="20" />
+                  <p>{item.user}:</p>
+                  <p>{item.comment}</p>
+                </div>
+              );
+            })}
+            <div className={ItemCSS.link}>
+              <Link>See All</Link>
               </div>
+          </div>
+          <div className={ItemCSS.Box}>
+            <AiFillFlag
+              size="28"
+              style={{ position: "absolute", left: "-3.5%", top: "51%" }}
+            />
+            {issues.map((item, index) => {
+              return (
+                <div key={index} className={ItemCSS.issuesItems}>
+                  <p>{`${issues.length - index}`}</p>
+                  <p>{item.info}</p>
+                  <button
+                    className={
+                      item.status === "Resolve"
+                        ? `${ItemCSS.issueStatusBtn} ${ItemCSS.issueStatusBtnResolve}`
+                        : ItemCSS.issueStatusBtn
+                    }>
+                    {item.status}
+                  </button>
+                  <select>
+                    <option>
+                      {item.version}
+                    </option>
+                  </select>
+                </div>
+              );
+            })}
+            <div className={ItemCSS.link}>
+              <Link to="#">See All</Link>
+              </div>
+          </div>
+          <div className={ItemCSS.Box}>
+            <AiFillInfoCircle
+              size="28"
+              style={{ position: "absolute", left: "-3.5%", top: "76%" }}
+            />
+        <table>
+          <tr>
+            <th>
+              No
+              <AiFillCaretDown color="gray" />
+            </th>
+            <th>
+              Activity
+              <AiFillCaretDown color="gray" />
+            </th>
+            <th>
+              User
+              <AiFillCaretDown color="gray" />
+            </th>
+          </tr>
+          {ActivitiesInfoData.map((item, index) => {
+            return (
+              <tr key={index} className={ItemCSS.row}>
+                <td className={ItemCSS.info}>{item.number}</td>
+                <td className={ItemCSS.info}>{item.version}</td>
+                <td className={ItemCSS.info}>{item.created}</td>
+              </tr>
             );
           })}
+        </table>
+            <div className={ItemCSS.link}>
+              <Link>See All</Link>
+              </div>
+          </div>
         </section>
       </div>
     </div>

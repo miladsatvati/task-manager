@@ -3,7 +3,7 @@ import TestCreate from '../../components/Test-Create/Test-Create'
 import AddTestCSS from "./Add-Test.module.css"
 import Sidebar from '../../components/Sidebar/Sidebar-menu'
 
-export default function AddTest() {
+export default function AddTestPage() {
     return (
     <>
           <Sidebar />

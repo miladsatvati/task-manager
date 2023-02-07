@@ -1,15 +1,15 @@
 .container {
-    width: 25rem;
+    width: 22rem;
     display: flex;
     position: relative;
 }
 
 .container input {
     width: 100%;
-    font-size: 1.5rem;
+    font-size: 1.4rem;
     padding: 0.6rem 0.9rem;
     border: 2px solid rgb(190, 186, 186);
-    border-radius: 10px;
+    border-radius: 20px;
     background-color: #fff;
     outline: none;
 }

@@ -3,7 +3,7 @@ import Item from '../../components/Items/Item'
 import ItemsCSS from './Items.module.css'
 import Sidebar from '../../components/Sidebar/Sidebar-menu'
 
-export default function Items() {
+export default function ItemsPage() {
   return (
     <div>
         <Sidebar />

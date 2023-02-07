@@ -99,30 +99,209 @@
     display: flex;
     flex-direction: column;
     width: 72%;
-    border: 2px solid silver;
     border-radius: 10px;
+    position: relative;
 }
 
-.issuesBox {
+.Box {
+    border: 2px solid silver;
+    border-radius: 10px;
+    padding: 0rem 0.2rem;
+    height: 11.5rem;
+    overflow-y: scroll;
+    margin-top: 0.6rem;
+}
+
+.link {
+    position: sticky;
+    bottom: 0;
+    text-align: right;
+    background-color: #fff;
+    height: 2rem;
+    padding: 0.3rem 1rem 0 0;
+}
+
+.Box a {
+    text-decoration: none;
+    font-size: 1.1rem;
+    vertical-align: middle;
+}
+
+.Box a:hover {
+    background-color: silver;
+    transition: 100ms;
+    color: black;
+    padding: 0.1rem;
+    border-radius: 5px;
+}
+
+.tasksItems {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1rem 2rem;
+    padding: 0.23rem 1rem;
 }
 
-.issuesBox p {
+.tasksItems p {
     border-radius: 5px;
     padding: 0.2rem 0.5rem;
     text-align: center;
     font-size: 1.3rem;
 }
 
-.issuesBox p:nth-child(2) {
-    width: 40rem;
+.tasksItems p:nth-child(2) {
+    width: 50rem;
+    text-align: left;
     background-color: #F4E450;
 }
 
-.issuesBox p:nth-child(3) {
+.statusBtn {
     width: 4.5rem;
+    padding: 0.2rem 0;
+    border-radius: 10px;
+    font-size: 1.2rem;
+    background-color: #00ccff;
+    border: 1px solid silver;
+    cursor: pointer;
+}
+
+.statusBtnDone {
+    background-color: red;
+}
+
+.commentsItems {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.23rem 1rem;
+}
+
+.commentsItems p {
+    border-radius: 5px;
+    padding: 0.2rem 0.5rem;
+    text-align: center;
+    font-size: 1.3rem;
+}
+
+.commentsItems p:nth-child(3) {
+    width: 50rem;
+    text-align: left;
+    background-color: #F4E450;
+}
+
+.issuesItems {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.23rem 1rem;
+}
+
+.issuesItems p {
+    border-radius: 5px;
+    padding: 0.2rem 0.5rem;
+    text-align: center;
+    font-size: 1.3rem;
+}
+
+.issuesItems p:nth-child(2) {
+    width: 45rem;
+    text-align: left;
+    background-color: #F4E450;
+}
+
+.issueStatusBtn {
+    width: 4.5rem;
+    padding: 0.2rem 0;
+    border-radius: 10px;
+    font-size: 1.2rem;
+    background-color: #00ccff;
+    border: 1px solid silver;
+    cursor: pointer;
+}
+
+.issueStatusBtnResolve {
+    background-color: red;
+}
+
+.items table {
+    width: 100%;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.items th {
+    padding-right: 5rem;
+}
+
+.info {
+    padding: 0.4rem 5.6rem 0.4rem 0;
+    color: rgb(99, 99, 99);
+}
+
+.row:hover {
+    background-color: rgb(117, 163, 255);
+}
+
+.Tasks {
+    border: 2px solid silver;
+    border-radius: 10px;
+    min-height: 46.5rem;
+    padding: 0.6rem 0;
+}
+
+.addBtn {
+    text-align: right;
+    padding: 0 0.2rem .5rem 0 ;
+}
+
+.TasksContainer a {
+    text-decoration: none;
+    text-align: right;
+    vertical-align: middle;
+}
+
+.tasksItemsM {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.23rem 1rem;
+}
+
+.tasksItemsM p {
+    width: 3rem;
+    border-radius: 10px;
+    padding: 0.5rem 1rem;
+    text-align: center;
+    font-size: 1.3rem;
+}
+
+.tasksItemsM p:nth-child(2) {
+    width: 45rem;
+    height: 3.3rem;
+    text-align: left;
+    background-color: #F4E450;
+}
+
+.taskstatusBtnM {
+    width: 4.5rem;
+    padding: 0.2rem 0;
+    border-radius: 10px;
+    font-size: 1.2rem;
+    background-color: #00ccff;
+    border: 1px solid silver;
+    cursor: pointer;
+}
+
+.taskstatusBtnResolveM {
+    background-color: red;
+}
+
+.tasksItemsM select {
+    font-size: 1.1rem;
+    border: none;
+    border-radius: 5px;
     background-color: #00ccff;
 }
+
+
