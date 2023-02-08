@@ -5,14 +5,14 @@ import { AiOutlinePlusCircle } from "react-icons/ai";
 import { AiFillCaretDown } from "react-icons/ai";
 import { TestListData } from './Test-List-Data';
 
-export default function Testlist() {
+export default function TestList() {
   return (
       <div className={TestListCSS.container}>
         <h1>Tests</h1>
         <div className={TestListCSS.items}>
           <div className={TestListCSS.addBtn}>
             <AiOutlinePlusCircle />
-            <Link to="#">Add New Test</Link>
+            <Link to="/add-test">Add New Test</Link>
           </div>
         <table>
           <thead>

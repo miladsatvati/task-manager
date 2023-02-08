@@ -1,0 +1,138 @@
+.container {
+    width: 100%;
+    height: 70rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.container h1 {
+    width: 70%;
+    margin-top: 1rem;
+    text-align: center;
+    padding: .6rem;
+    border: 3px solid rgba(0, 0, 0, 0.288);
+    border-radius: 1rem;
+    
+}
+.main {
+    margin-top: .3rem;
+    height: 66rem;
+    width: 70%;
+    border: 3px solid rgba(0, 0, 0, 0.288);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+    margin-bottom: 2rem;
+
+}
+.items {
+    display: inline-block;
+    background-color: rgba(128, 128, 128, 0.301);
+    border-radius: 7px;
+} 
+.header {
+    height: 6%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.header li{
+    list-style: none;
+    display: inline-block;
+    padding: .6rem;
+    text-decoration: none;
+}
+.headerLink {
+    text-decoration: none;
+    font-size: 18px;
+    color: black;
+}
+.additem {
+    padding: 8px;
+    border-radius: 10px;
+    background-color: aqua;
+    font-size: 18px;
+    text-decoration: none;
+    color: black;
+    display: flex;
+    align-items: center; 
+    margin-right: 3rem;
+    margin-left: 27rem;
+}
+.headerIcon {
+    width: 22px;
+    height: 22px;
+    color: rgba(128, 128, 128, 0.733);
+    /* margin-right: ; */
+}
+.mainChild {
+    height: 52rem;
+    width: 98%;
+    border: 3px solid rgba(0, 0, 0, 0.288);
+    border-radius: 10px;
+    display: grid;
+    grid-template-columns: repeat(6,1fr);
+    grid-template-rows: repeat(3,1fr);
+
+}
+.ps {
+    margin: 1rem;
+    height: 90%;
+    border: 2px solid rgba(0, 0, 0, 0.377);
+    border-radius: 5px;
+}
+.headerPS {
+    width: 100%;
+    height: 30%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.PsProfile {
+    margin-top: 5px;
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+    background-color: yellow;
+}
+
+.Psmain {
+    width: 100%;
+    height: 70%;
+    display: flex;
+    flex-direction: column;
+}
+
+.row {
+    height: 30%;
+    margin-top: 1rem;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.row p {
+    display: inline-block;
+    border: 2px solid rgba(0, 0, 0, 0.219);
+    padding: 6px;
+    font-size: 15px;
+    border-radius: 5px;
+}
+.footer{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.footer p {
+    border: 1px solid silver;
+    width: 50%;
+    height: 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

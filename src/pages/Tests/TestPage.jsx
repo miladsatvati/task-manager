@@ -1,11 +1,15 @@
-import React from 'react'
-import TestCSS from "./Test.module.css"
-import Testlist from '../../components/Test-List/Test-list'
+import React from "react";
+import TestCSS from "./TestPage.module.css";
+import Testlist from "../../components/Test-List/Test-list";
+import Sidebar from "../../components/Sidebar/Sidebar-menu";
 
-export default function Test() {
+export default function TestsPage() {
   return (
-    <div className={TestCSS.testContainer}>
-        <Testlist />  
+    <div>
+      <Sidebar />
+      <main className={TestCSS.testContainer}>
+        <Testlist />
+      </main>
     </div>
-  )
+  );
 }

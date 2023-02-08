@@ -21,7 +21,7 @@ export default function PsInfo() {
           <div className={PsInfoCSS.infos}>
                       <p>16/5/2022</p>          
                       <p>Lab1</p>          
-                      <input value="blabadwerwerlalb@gmail.com" readonly="readonly" />         
+                      <input value="blabadwerwerlalb@gmail.com" readOnly="readOnly" />         
                       <p>120</p>          
                       <p>1</p>          
                       <p>10</p>          

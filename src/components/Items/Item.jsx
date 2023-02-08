@@ -60,7 +60,7 @@ export default function Item() {
           </div>
         </aside>
         <section className={ItemCSS.main}>
-          <div className={ItemCSS.Box} style={{ "margin-top": 0 }}>
+          <div className={ItemCSS.Box} style={{ "marginTop": 0 }}>
             <AiOutlineOrderedList
               size="28"
               style={{ position: "absolute", left: "-3.5%", top: "0%" }}
@@ -138,7 +138,8 @@ export default function Item() {
               size="28"
               style={{ position: "absolute", left: "-3.5%", top: "76%" }}
             />
-        <table>
+            <table>
+              <thead>
           <tr>
             <th>
               No
@@ -152,14 +153,17 @@ export default function Item() {
               User
               <AiFillCaretDown color="gray" />
             </th>
-          </tr>
+                </tr>
+                </thead>
           {ActivitiesInfoData.map((item, index) => {
             return (
-              <tr key={index} className={ItemCSS.row}>
+              <tbody key={index}>
+              <tr className={ItemCSS.row}>
                 <td className={ItemCSS.info}>{item.number}</td>
                 <td className={ItemCSS.info}>{item.version}</td>
                 <td className={ItemCSS.info}>{item.created}</td>
               </tr>
+              </tbody>
             );
           })}
         </table>

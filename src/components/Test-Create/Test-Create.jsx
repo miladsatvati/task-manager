@@ -1,9 +1,15 @@
-import React from 'react'
+import React, { useState } from 'react'
 import TestCreateCSS from "./Test-Create.module.css"
 import { AiOutlinePlusCircle } from "react-icons/ai";
 import { Link } from 'react-router-dom'
 
 export default function TestCreate() {
+  // const [type, setType] = useState(null)
+  // const [version, setVersion] = useState(null)
+  // const [rn, setRn] = useState(null)
+  // const [rn2, setrn2] = useState(null)
+  // const [files, setFiles] = useState(null)
+
   return (
     <div className={TestCreateCSS.container}>
     <h1>Add Test</h1>
