@@ -1,6 +1,18 @@
 .container {
     display: flex;
+    /* flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 85vh;
+    gap: 0.8rem;
+    height: 86vh; */
+}
+
+.main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1.5rem;
+    width: 95%;
+    /* background-color: red; */
 }

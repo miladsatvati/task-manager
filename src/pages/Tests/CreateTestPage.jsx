@@ -6,7 +6,7 @@ import Sidebar from '../../components/Sidebar/Sidebar-menu'
 export default function CreateTestPage() {
   return (
     <div>
-        <Sidebar />
+        <Sidebar page="pslist" />
       <main className={TestCSS.testContainer}>
         <TestCreate />
       </main>

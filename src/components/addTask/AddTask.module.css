@@ -11,10 +11,11 @@
     text-align: center;
     padding: 2rem;
     border: 3px solid rgba(0, 0, 0, 0.288);
+    border-radius: 10px;
     
 }
 .main {
-    margin-top: 1rem;
+    margin-top: .3rem;
     height: 50rem;
     width: 70%;
     border: 3px solid rgba(0, 0, 0, 0.288);
@@ -59,15 +60,27 @@
     text-align: center;
     float: right;
     font-size: 18px;
-    
-    
-    
 }
+.item select {
+    width: 8.5rem;
+    background-color: #bdbcbc9f;
+    border: none;
+    height: 1.7rem;
+    border-radius: 5px;
+    text-align: center;
+    float: right;
+    font-size: 18px;
+}
+
 .AddTaskForm button {
+    cursor: pointer;
     width: 14rem;
-    height: 2rem;
+    padding: .5rem;
     background-color: aquamarine;
     border: none;
     border-radius: 8px;
     font-size: 20px;
+}
+.AddTaskForm button:hover {
+    background-color: rgba(137, 43, 226, 0.562);
 }

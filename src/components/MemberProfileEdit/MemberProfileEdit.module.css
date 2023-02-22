@@ -1,0 +1,99 @@
+.container {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+}
+
+.container h1 {
+    width: 70%;
+    margin-top: 1rem;
+    text-align: center;
+    padding: .6rem;
+    border: 3px solid rgba(0, 0, 0, 0.288);
+    border-radius: 1rem;
+}
+
+.main {
+    margin-top: .3rem;
+    height: 66rem;
+    width: 70%;
+    border: 3px solid rgba(0, 0, 0, 0.288);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+    margin-bottom: 2rem;
+}
+.header {
+    height: 3rem;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.Edit {
+    justify-content: center;
+    width: 5rem;
+    padding: 8px;
+    border-radius: 10px;
+    background-color: #D0D0D8;
+    font-size: 18px;
+    text-decoration: none;
+    color: black;
+    display: flex;
+    align-items: center; 
+    margin-right: 3rem;
+}
+.mainChild {
+    border: 3px solid rgba(0, 0, 0, 0.288);
+    width: 98%;
+    height: 48rem;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+}
+.profileForm {
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.item {
+    width: 17rem;
+    font-size: 20px;
+    margin-top: 50px;
+    margin-left: 30px;
+}
+
+.item input {
+    float: right;
+    border: none;
+    background-color: #D0D0D8;
+    width: 11rem;
+    height: 2rem;
+    border-radius: 5px;
+    font-size: 20px;
+    text-align: center;
+
+}
+.item input::placeholder {
+    font-size: 18px;
+    text-align: center;
+    color: black;
+}
+.profileForm button {
+    width: 17rem;
+    height: 2.3rem;
+    background-color: rgba(14, 207, 23, 0.548);
+    margin-top: 3rem;
+    margin-left: 2rem;
+    border: none;
+    font-size: 18px;
+    border-radius: 5px;
+    cursor: pointer;
+}

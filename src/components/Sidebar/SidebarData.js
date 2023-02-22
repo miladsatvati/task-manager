@@ -11,7 +11,7 @@ import { ReactComponent as Member } from "../../assets/pics/member.svg"
 export const SidebarData = [
     {
         title: "Dashboard",
-        path: "/dashboard",
+        path: "/PslistPage",
         icon: <Home className={SidebarCSS.icon} />
     },
     {
@@ -26,12 +26,12 @@ export const SidebarData = [
     },
     {
         title: "Tasks",
-        path: "/tasks",
+        path: "/ShowTaskPage",
         icon: <Tasks className={SidebarCSS.icon} />
     },
     {
         title: "Reports",
-        path: "/reports",
+        path: "/LinegraphPsPage",
         icon: <Reports className={SidebarCSS.icon} />
     },
     {

@@ -5,9 +5,12 @@ import { services } from "./Item-Data";
 import { AiFillFlag } from "react-icons/ai";
 import { AiOutlinePlusCircle } from "react-icons/ai";
 import { issues } from "./Item-Data";
-import { Link } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
+import { Pagination } from '@mui/material'
 
 export default function ItemIssue() {
+  const { id } = useParams()
+
   return (
     <div className={ItemCSS.container}>
       <h1 className={ItemCSS.title}>Items</h1>
@@ -60,7 +63,7 @@ export default function ItemIssue() {
             />
             <div className={ItemCSS.addBtn}>
               <AiOutlinePlusCircle style={{ verticalAlign: "middle" }} />
-              <Link to="#">Add New Issue</Link>
+              <Link to={`/add-item-issue/${id}`}>Add New Issue</Link>
             </div>
             <div className={ItemCSS.Tasks}>
               {issues.map((item, index) => {
@@ -83,6 +86,9 @@ export default function ItemIssue() {
                   </div>
                 );
               })}
+              <footer className={ItemCSS.Pagination}>
+                <Pagination count={10} color="primary" />
+              </footer>
             </div>
           </div>
         </section>

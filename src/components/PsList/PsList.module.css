@@ -1,23 +1,23 @@
 .container {
-    width: 100%;
-    height: 70rem;
+    width: 74%;
+    height: 90rem;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 .container h1 {
-    width: 70%;
+    width: 100%;
     margin-top: 1rem;
     text-align: center;
-    padding: .6rem;
+    padding: 1rem;
     border: 3px solid rgba(0, 0, 0, 0.288);
     border-radius: 1rem;
     
 }
 .main {
     margin-top: .3rem;
-    height: 66rem;
-    width: 70%;
+    height: 80rem;
+    width: 100%;
     border: 3px solid rgba(0, 0, 0, 0.288);
     border-radius: 10px;
     display: flex;
@@ -32,6 +32,7 @@
     background-color: rgba(128, 128, 128, 0.301);
     border-radius: 7px;
 } 
+
 .header {
     height: 6%;
     width: 100%;
@@ -70,7 +71,7 @@
     /* margin-right: ; */
 }
 .mainChild {
-    height: 52rem;
+    height: 70rem;
     width: 98%;
     border: 3px solid rgba(0, 0, 0, 0.288);
     border-radius: 10px;
@@ -84,6 +85,7 @@
     height: 90%;
     border: 2px solid rgba(0, 0, 0, 0.377);
     border-radius: 5px;
+    cursor: pointer;
 }
 .headerPS {
     width: 100%;
@@ -94,7 +96,7 @@
     align-items: center;
 }
 .PsProfile {
-    margin-top: 5px;
+    /* margin-top: 3px; */
     width: 3rem;
     height: 3rem;
     border-radius: 50%;
@@ -131,8 +133,30 @@
 .footer p {
     border: 1px solid silver;
     width: 50%;
-    height: 3rem;
+    height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-bottom: 40px;
+    border-bottom: none;
 }
+.PaginationPs {
+    margin: 20px;
+}
+/* .footer1 {
+    margin-top: 2px;
+    display: inline-block;
+    height: 100%;
+    width: 50%;
+    border-top: 2px solid rgba(0, 0, 0, 0.219);
+}
+
+.footer2 {
+    margin-top: 2px;
+    display: inline-block;
+    height: 100%;
+    width: 50%;
+    border-top: 2px solid rgba(0, 0, 0, 0.219);
+    border-left: 2px solid rgba(0, 0, 0, 0.219);
+
+} */

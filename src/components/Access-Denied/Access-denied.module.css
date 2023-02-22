@@ -1,0 +1,15 @@
+.container {
+    width: 40rem;
+    height: 40rem;
+    /* background-color: red; */
+    background-image: url("../../assets/pics/access-denied.svg");
+    background-repeat: no-repeat;
+    margin-top: 2rem;
+}
+
+.container h1 {
+    text-align: center;
+    position: relative;
+    top: -15%;
+    color: rgba(88, 62, 62, 0.87);
+}

@@ -1,6 +1,8 @@
-import React from "react";
+import React, { useEffect, useState } from 'react'
 import ItemCSS from "./Item.module.css";
 import Calendar from "../Calendar/Calendar";
+import { axiosApi } from '../../defz';
+import toast from "react-hot-toast";
 import { AiOutlineOrderedList } from "react-icons/ai";
 import { BsFillPeopleFill } from "react-icons/bs"
 import { AiFillFlag } from "react-icons/ai"
@@ -12,9 +14,39 @@ import { tasks } from "./Item-Data";
 import { comments } from "./Item-Data";
 import { issues } from "./Item-Data";
 import { ActivitiesInfoData } from "../Activities-Info/Activities-info-data";
-import { Link } from "react-router-dom";
+import { Link, useNavigate, useParams } from "react-router-dom";
 
 export default function Item() {
+  const { id } = useParams()
+
+  const [psData, setPsData] = useState()
+
+  const getPsInfo = () => {
+    axiosApi(
+      "api/user/get/ps_one",
+      { psid: id },
+      localStorage.getItem('admin-token')
+    )
+    .then(res => setPsData(res.data.data[0]))
+    .catch(res => toast.error('Fail to connect to server'))
+  }
+
+  const getPsChat = () => {
+    axiosApi(
+      "api/user/get/ps_one",
+      { psid: id },
+      localStorage.getItem('admin-token')
+    )
+    .then(res => setPsData(res.data.data[0]))
+    .catch(res => toast.error('Fail to connect to server'))
+  }
+
+  useEffect( () => {
+    getPsInfo()
+  }, [])
+  
+
+  const navTo = useNavigate()
   return (
     <div className={ItemCSS.container}>
       <h1 className={ItemCSS.title}>Items</h1>
@@ -22,7 +54,7 @@ export default function Item() {
         <aside>
           <div className={ItemCSS.ver}>
             <p>Version:</p>
-            <p>1.2.3.4</p>
+            <p>{psData?.test_version}</p>
           </div>
           <div className={ItemCSS.U}>
             <p>U:</p>
@@ -32,7 +64,7 @@ export default function Item() {
           </div>
           <div className={ItemCSS.cal}>
             <p>Oout:</p>
-            <Calendar />
+            <p>{psData?.date_made}</p>
           </div>
           <div className={ItemCSS.noSer}>
             <p>Number of services:</p>
@@ -60,7 +92,7 @@ export default function Item() {
           </div>
         </aside>
         <section className={ItemCSS.main}>
-          <div className={ItemCSS.Box} style={{ "marginTop": 0 }}>
+          <div className={ItemCSS.Box} >
             <AiOutlineOrderedList
               size="28"
               style={{ position: "absolute", left: "-3.5%", top: "0%" }}
@@ -82,7 +114,7 @@ export default function Item() {
               );
             })}
             <div className={ItemCSS.link}>
-              <Link>See All</Link>
+              <Link to={`/item-tasks/${id}`}>See All</Link>
             </div>
           </div>
           <div className={ItemCSS.Box}>
@@ -95,12 +127,13 @@ export default function Item() {
                 <div key={index} className={ItemCSS.commentsItems}>
                   <BsFillPersonFill size="20" />
                   <p>{item.user}:</p>
-                  <p>{item.comment}</p>
+                  <p>{item.comment}:</p>
                 </div>
               );
             })}
             <div className={ItemCSS.link}>
-              <Link>See All</Link>
+              <input type="text" placeholder="Type your comment" onClick={() => navTo("/item-chats")} />
+              <Link to="/item-chats">See All</Link>
               </div>
           </div>
           <div className={ItemCSS.Box}>
@@ -130,7 +163,7 @@ export default function Item() {
               );
             })}
             <div className={ItemCSS.link}>
-              <Link to="#">See All</Link>
+              <Link  to={`/item-issues/${id}`}>See All</Link>
               </div>
           </div>
           <div className={ItemCSS.Box}>
@@ -168,7 +201,7 @@ export default function Item() {
           })}
         </table>
             <div className={ItemCSS.link}>
-              <Link>See All</Link>
+              <Link to="/item-remotemsg">See All</Link>
               </div>
           </div>
         </section>

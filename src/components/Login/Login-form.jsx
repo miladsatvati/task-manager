@@ -19,7 +19,7 @@ export default function Loginform() {
     axiosApi("api/admin/login", LoginData).then((res) => {
       if (res.data.status_code === 200) {
         localStorage.setItem("admin-token", res.data.admin_token);
-        navigate("./dashboard");
+        navigate("./PslistPage");
       } else {
         toast.error(res.data.description);
         setUserName("")

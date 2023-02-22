@@ -6,20 +6,23 @@ export const axiosApi = async (url, body, token) => {
   let lastResult;
   if (body) {
     await axios(`${mainAddress}/${url}`, {
-        method: "post",
-        headers: {
-            "Content-Type": "application/json",
-            "Auth-Token": token
-        },
-        data: body,
-      })
+      method: "post",
+      headers: {
+        "Content-Type": "application/json",
+        "Auth-token": token,
+        "auth-token": token,
+      },
+      data: body,
+    })
       .then((response) => (lastResult = response))
       .catch((err) => (lastResult = err));
   } else {
     await axios(`${mainAddress}/${url}`, {
       method: "GET",
       headers: {
-        "Auth-Token": token,
+        "Content-Type": "application/json",
+        "Auth-token": token,
+        "auth-token": token,
       },
     })
       .then((response) => (lastResult = response))

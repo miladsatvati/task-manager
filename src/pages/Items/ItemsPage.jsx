@@ -5,9 +5,9 @@ import Sidebar from '../../components/Sidebar/Sidebar-menu'
 
 export default function ItemsPage() {
   return (
-    <div>
-        <Sidebar />
-      <main className={ItemsCSS.container}>
+    <div className={ItemsCSS.container}>
+        <Sidebar page="items" />
+      <main className={ItemsCSS.main}>
         <Item />
       </main>
     </div>
